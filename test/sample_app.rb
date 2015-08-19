@@ -21,7 +21,7 @@ class SampleApp < Rails::Application
     }
   end
 
-  config.middleware.use Browser::Middleware do
+  config.middleware.use BVBrowser::Middleware do
     redirect_to upgrade_path(browser: "ie6") if browser.ie6?
     redirect_to upgrade_path(browser: "ie7") if browser.ie7?
     redirect_to "/invalid" if browser.ie8?

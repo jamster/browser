@@ -1,4 +1,4 @@
-class Browser
+class BVBrowser
   module Mobile
     # Detect if browser is mobile.
     def mobile?

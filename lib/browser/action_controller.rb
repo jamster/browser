@@ -1,6 +1,6 @@
 require "action_controller/railtie"
 
-class Browser
+class BVBrowser
   module ActionController
     extend ActiveSupport::Concern
 
@@ -11,7 +11,7 @@ class Browser
     private
 
     def browser
-      @browser ||= Browser.new(
+      @browser ||= BVBrowser.new(
         accept_language: request.headers["Accept-Language"],
         ua: request.headers["User-Agent"]
       )

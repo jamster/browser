@@ -1,4 +1,4 @@
-class Browser
+class BVBrowser
   module IE
     TRIDENT_VERSION_REGEX = %r[Trident/([0-9.]+)]
     MODERN_IE = %r[Trident/.*?; rv:(.*?)]

@@ -1,8 +1,8 @@
 require "spec_helper"
 require "browser/rails"
 require "sample_app"
-
-describe Browser::Middleware do
+require 'byebug'
+describe BVBrowser::Middleware do
   include Rack::Test::Methods
 
   def app
@@ -16,6 +16,8 @@ describe Browser::Middleware do
 
   it "redirects ie6 to upgrade path" do
     get "/", {}, {"HTTP_USER_AGENT" => "MSIE 6", "HTTP_ACCEPT" => "text/html"}
+    # byebug
+    # last_response.redirect?
     follow_redirect!
 
     assert_equal "UPGRADE: ie6", last_response.body

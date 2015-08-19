@@ -1,4 +1,4 @@
-class Browser
+class BVBrowser
   module Meta
     class Platform < Base
       def meta

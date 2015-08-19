@@ -1,4 +1,4 @@
-class Browser
+class BVBrowser
   module Version
     MAJOR = 0
     MINOR = 9

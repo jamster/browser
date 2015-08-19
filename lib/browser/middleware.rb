@@ -1,6 +1,6 @@
 require "uri"
 
-class Browser
+class BVBrowser
   class Middleware
     # Detect the most common assets.
     ASSETS_REGEX = /\.(css|png|jpe?g|gif|js|svg|ico|flv|mov|m4v|ogg|swf)\z/i

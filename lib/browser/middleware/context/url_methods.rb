@@ -1,4 +1,4 @@
-class Browser
+class BVBrowser
   class Middleware
     class Context
       module UrlMethods

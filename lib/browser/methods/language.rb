@@ -1,4 +1,4 @@
-class Browser
+class BVBrowser
   module Language
     LANGUAGES = YAML.load_file(File.expand_path("../../../../languages.yml", __FILE__))
 

@@ -26,7 +26,7 @@ require "browser/meta/platform"
 require "browser/meta/safari"
 require "browser/meta/webkit"
 
-class Browser
+class BVBrowser
   include IE
   include Platform
   include Mobile

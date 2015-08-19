@@ -1,6 +1,6 @@
 require "browser/middleware/context/url_methods"
 
-class Browser
+class BVBrowser
   class Middleware
     class Context
       module Additions

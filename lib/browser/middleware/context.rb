@@ -1,4 +1,4 @@
-class Browser
+class BVBrowser
   class Middleware
     class Context
       attr_reader :browser, :request
@@ -6,7 +6,7 @@ class Browser
       def initialize(request)
         @request = request
 
-        @browser = Browser.new(
+        @browser = BVBrowser.new(
           ua: request.user_agent,
           accept_language: request.env["HTTP_ACCEPT_LANGUAGE"]
         )

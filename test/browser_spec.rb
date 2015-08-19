@@ -1,16 +1,16 @@
 # -*- encoding: utf-8 -*-
 require "spec_helper"
 
-describe Browser do
+describe BVBrowser do
   before do
-    @browser = Browser.new
-    Browser::Bots.instance_variable_set("@detect_empty_ua", false)
+    @browser = BVBrowser.new
+    BVBrowser::Bots.instance_variable_set("@detect_empty_ua", false)
   end
 
   it "yields self when block is given" do
     browser = nil
-    Browser.new {|b| browser = b }
-    assert_kind_of Browser, browser
+    BVBrowser.new {|b| browser = b }
+    assert_kind_of BVBrowser, browser
   end
 
   it "responds to ua methods" do
@@ -27,15 +27,15 @@ describe Browser do
   end
 
   it "sets accept language while instantiating object" do
-    @browser = Browser.new(:accept_language => "pt-br")
+    @browser = BVBrowser.new(:accept_language => "pt-br")
     assert_equal ["pt-br"], @browser.accept_language
   end
 
   it "sets user agent while instantianting object" do
-    @browser = Browser.new(:ua => "Safari")
+    @browser = BVBrowser.new(:ua => "Safari")
     assert_equal "Safari", @browser.ua
 
-    @browser = Browser.new(:user_agent => "Chrome")
+    @browser = BVBrowser.new(:user_agent => "Chrome")
     assert_equal "Chrome", @browser.ua
   end
 
@@ -982,14 +982,14 @@ describe Browser do
   end
 
   it "allows setting empty string as bots" do
-    Browser::Bots.detect_empty_ua!
+    BVBrowser::Bots.detect_empty_ua!
     @browser.ua = ""
 
     assert @browser.bot?
   end
 
   it "doesn't detect mozilla as a bot when considering empty UA" do
-    Browser::Bots.detect_empty_ua!
+    BVBrowser::Bots.detect_empty_ua!
     @browser.ua = "Mozilla"
 
     refute @browser.bot?
@@ -1004,7 +1004,7 @@ describe Browser do
   end
 
   it "returns bot name (empty string ua detection enabled)" do
-    Browser::Bots.detect_empty_ua!
+    BVBrowser::Bots.detect_empty_ua!
     @browser.ua = ""
 
     assert_equal @browser.bot_name, "Generic Bot"

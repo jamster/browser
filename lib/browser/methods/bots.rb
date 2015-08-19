@@ -1,4 +1,4 @@
-class Browser
+class BVBrowser
   module Bots
     root = Pathname.new(File.expand_path("../../../..", __FILE__))
     BOTS = YAML.load_file(root.join("bots.yml"))
@@ -29,7 +29,7 @@ class Browser
     private
 
     def bot_with_empty_ua?
-      Browser::Bots.detect_empty_ua? && ua.strip == ""
+      BVBrowser::Bots.detect_empty_ua? && ua.strip == ""
     end
   end
 end

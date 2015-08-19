@@ -1,4 +1,4 @@
-class Browser
+class BVBrowser
   module Devices
     # Detect if browser is iPhone.
     def iphone?

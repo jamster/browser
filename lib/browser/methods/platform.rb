@@ -1,4 +1,4 @@
-class Browser
+class BVBrowser
   module Platform
     # Detect if browser is Android.
     def android?

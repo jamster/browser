@@ -1,4 +1,4 @@
-class Browser
+class BVBrowser
   module Consoles
     # Detect if browser is running under Xbox.
     def xbox?
